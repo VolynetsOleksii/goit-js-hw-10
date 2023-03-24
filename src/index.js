@@ -1,4 +1,4 @@
-// import compiledTemplate from './templates/data.hbs';
+
 import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
