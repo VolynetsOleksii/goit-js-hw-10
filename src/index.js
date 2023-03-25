@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import './css/styles.css';
-import fetchCountries from './fetchCountries.js';
+import {fetchCountries} from './fetchCountries.js';
 
 const DEBOUNCE_DELAY = 300;
 let formData;
@@ -16,7 +16,7 @@ const refs = {
 refs.input.addEventListener('input', debounce(onInputData, DEBOUNCE_DELAY));
 
 function onInputData(e) {
-  formData = e.target.value;
+  formData = e.target.value.trim();
   if (refs.input.value === '') {
     clearData();
   } else {
